@@ -1,0 +1,2564 @@
+{
+  "Siri": {
+    "ServiceDelivery": {
+      "ResponseTimestamp": "2025-01-24T10:46:18.189Z",
+      "ProducerRef": "IVTR_HET",
+      "ResponseMessageIdentifier": "IVTR_HET:ResponseMessage:10752948-ffb4-46f5-9ca2-28647790c1ba:LOC:",
+      "StopMonitoringDelivery": [
+        {
+          "ResponseTimestamp": "2025-01-24T10:46:18.240Z",
+          "Version": "2.0",
+          "Status": "true",
+          "MonitoredStopVisit": [
+            {
+              "RecordedAtTime": "2025-01-24T10:17:04.351Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_142585:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::bccf8297-ffbf-4700-9e7c-91c163302ce2:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41091:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pontoise"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "NORA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": true,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pontoise"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T10:17:00.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T10:17:40.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 33,
+                  "AimedArrivalTime": "2025-01-24T10:15:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T10:15:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "142585"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:23:33.173Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_123496:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01737:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::c863507f-d57e-4b5c-ae70-dbf8dea32a4d:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41071:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare du Nord"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "APOR"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": true,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare du Nord"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T10:23:30.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T10:24:10.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T10:21:40.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T10:22:20.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "123496"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["shortTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:29:27.531Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_147102:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::411344bf-08f9-40df-a3db-7b05afb4d3ed:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41326:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pont de Rungis"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "ROMI"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": true,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pont de Rungis"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T10:29:35.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T10:30:15.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 2,
+                  "AimedArrivalTime": "2025-01-24T10:28:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T10:28:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "147103"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:31:02.846Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_142187:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::7766f899-6e08-47fe-8348-8d83c2656d2b:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41088:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Montigny Beauchamp"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "GOTA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": true,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Montigny Beauchamp"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T10:31:00.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T10:31:40.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 29,
+                  "AimedArrivalTime": "2025-01-24T10:30:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T10:30:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "142187"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:36:33.820Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_123463:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01737:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::51532e66-0073-46e1-aa30-6f029e111643:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41091:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pontoise"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "OPOC"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": true,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pontoise"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T10:36:30.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T10:37:10.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 9,
+                  "AimedArrivalTime": "2025-01-24T10:35:50.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T10:36:30.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "123463"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["shortTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:45:05.667Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_147504:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::8807478e-e428-446a-b333-aead49f19e15:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:412833:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Massy-Palaiseau"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "MONA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": true,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Massy-Palaiseau"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T10:45:00.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T10:45:40.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T10:43:50.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T10:44:30.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "147505"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:46:05.381Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_142589:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::2b6c3e61-8d8a-4d21-8196-895f4f9aad97:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41091:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pontoise"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "NORA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": true,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pontoise"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T10:46:00.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T10:46:40.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 33,
+                  "AimedArrivalTime": "2025-01-24T10:45:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T10:45:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "142589"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:45:51.785Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_123498:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01737:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::4e8aa14a-5f73-40ec-b122-177fbe6837f9:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41071:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare du Nord"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "APOR"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare du Nord"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T10:52:10.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T10:52:50.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T10:51:40.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T10:52:20.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "123498"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["shortTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:08.559Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_147106:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::d0fa8ae4-4f5f-43f8-ad63-48c902ddece7:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41326:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pont de Rungis"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "ROMI"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pont de Rungis"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T10:58:10.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T10:58:50.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 2,
+                  "AimedArrivalTime": "2025-01-24T10:58:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T10:58:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "147107"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:46:04.585Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_142191:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::abb95091-b3c5-4f3c-9178-14ce43e1068e:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41088:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Montigny Beauchamp"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "GOTA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Montigny Beauchamp"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T11:00:10.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T11:00:50.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 29,
+                  "AimedArrivalTime": "2025-01-24T11:00:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T11:00:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "142190"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:46:04.895Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_123465:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01737:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::5945d0b7-7e6f-492a-92fe-5b1d32e3e459:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41091:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pontoise"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "OPOC"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pontoise"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T11:05:50.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T11:06:30.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 9,
+                  "AimedArrivalTime": "2025-01-24T11:05:50.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T11:06:30.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "123465"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:06.634Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_147508:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::cb040ecf-14e5-43b7-ba80-bfcdcee06a16:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:412833:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Massy-Palaiseau"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "MONA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Massy-Palaiseau"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T11:13:50.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T11:14:30.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T11:13:50.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T11:14:30.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "147509"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:44:43.892Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_142593:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::f80134ac-d75d-4982-a90a-10e95afca2a4:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41091:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pontoise"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "NORA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pontoise"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T11:15:10.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T11:15:50.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 33,
+                  "AimedArrivalTime": "2025-01-24T11:15:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T11:15:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "142593"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:03.419Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_123500:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01737:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::b0d5ee8c-8413-4840-afcd-d7e4fa328630:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41071:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare du Nord"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "APOR"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare du Nord"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T11:21:40.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T11:22:20.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T11:21:40.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T11:22:20.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "123500"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["shortTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:07.544Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_147110:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::d0a7ea1a-4ac0-4eb2-aa7d-e82a99c31d5b:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41326:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pont de Rungis"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "ROMI"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pont de Rungis"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T11:28:10.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T11:28:50.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 2,
+                  "AimedArrivalTime": "2025-01-24T11:28:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T11:28:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "147111"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:45:39.610Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_142195:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::a7b90d5f-0ca9-4a57-983a-23275ab93d2a:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41088:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Montigny Beauchamp"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "GOTA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Montigny Beauchamp"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T11:30:10.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T11:30:50.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 29,
+                  "AimedArrivalTime": "2025-01-24T11:30:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T11:30:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "142194"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:08.925Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_123467:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01737:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::8d7bc439-9279-49e7-a40b-79dcf2d55094:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41091:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pontoise"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "OPOC"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pontoise"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T11:35:50.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T11:36:30.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 9,
+                  "AimedArrivalTime": "2025-01-24T11:35:50.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T11:36:30.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "123467"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["shortTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:08.237Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_147512:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::6e37d9f1-9699-4e5c-a3e1-8d72a4d7e6fe:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:412833:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Massy-Palaiseau"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "MONA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Massy-Palaiseau"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T11:43:50.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T11:44:30.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T11:43:50.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T11:44:30.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "147513"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:45:56.738Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_142597:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::a5bf2377-e624-4945-a292-be2f1b41bbf2:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41091:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pontoise"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "NORA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pontoise"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T11:45:54.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T11:46:34.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 33,
+                  "AimedArrivalTime": "2025-01-24T11:45:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T11:45:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "142597"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:09.681Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_123502:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01737:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::79af30af-b26f-4492-b4ed-ff16e6f4090a:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41071:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare du Nord"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "APOR"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare du Nord"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T11:51:40.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T11:52:20.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T11:51:40.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T11:52:20.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "123502"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:45:54.284Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_148103:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::6bdf0883-c8ce-44fe-9d2d-c2be11bc10ba:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41088:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Montigny Beauchamp"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "GOTA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Montigny Beauchamp"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T12:00:12.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T12:00:52.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 29,
+                  "AimedArrivalTime": "2025-01-24T12:00:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T12:00:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "148102"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:08.968Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_123469:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01737:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::163edd92-cfab-41b1-a3fd-9e8c0c9609e3:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41091:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pontoise"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "OPOC"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pontoise"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T12:05:50.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T12:06:30.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 9,
+                  "AimedArrivalTime": "2025-01-24T12:05:50.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T12:06:30.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "123469"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["shortTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:07.533Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_147516:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::622127e8-e049-4460-bd6b-7d1d7b614ee6:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:412833:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Massy-Palaiseau"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "MONA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Massy-Palaiseau"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T12:13:50.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T12:14:30.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T12:13:50.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T12:14:30.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "147517"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T10:46:00.447Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_148505:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::1aa6de3c-a50d-499e-9d8c-c89ce4ab838f:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41091:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pontoise"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "NORA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pontoise"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T12:15:10.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T12:15:50.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 33,
+                  "AimedArrivalTime": "2025-01-24T12:15:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T12:15:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "148504"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:09.135Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_123504:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01737:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::6634f969-b64f-4d94-aacb-d65a10772089:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41071:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare du Nord"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "APOR"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare du Nord"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T12:21:40.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T12:22:20.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T12:21:40.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T12:22:20.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "123504"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["shortTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:05.827Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_147118:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::2d0ca010-080f-4913-978f-c323dbefca76:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41326:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pont de Rungis"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "ROMI"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pont de Rungis"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T12:28:10.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T12:28:50.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 2,
+                  "AimedArrivalTime": "2025-01-24T12:28:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T12:28:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "147118"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:07.149Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_148107:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::3f9e0eeb-bacb-4b5a-9c11-00da415618b0:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41088:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Montigny Beauchamp"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "GOTA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Montigny Beauchamp"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T12:30:10.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T12:30:50.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 29,
+                  "AimedArrivalTime": "2025-01-24T12:30:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T12:30:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "148107"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:08.532Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_123471:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01737:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::951d1faf-ae16-4cd8-9e00-4ec71e3ac31f:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41091:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pontoise"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "OPOC"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pontoise"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T12:35:50.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T12:36:30.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 9,
+                  "AimedArrivalTime": "2025-01-24T12:35:50.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T12:36:30.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "123471"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["shortTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:04.581Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_147520:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::98082976-9923-435e-a6bf-e58c8e3e4394:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:412833:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Massy-Palaiseau"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "MONA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Massy-Palaiseau"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T12:43:50.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T12:44:30.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T12:43:50.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T12:44:30.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "147521"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:08.522Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_148509:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::055b7028-72b3-4378-9733-a0fcba02e92c:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41091:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pontoise"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "NORA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pontoise"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T12:45:10.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T12:45:50.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 33,
+                  "AimedArrivalTime": "2025-01-24T12:45:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T12:45:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "148508"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:03.959Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_123506:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01737:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::34ffc12c-8b4a-4b77-9fe9-8a23ded50eb6:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41071:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare du Nord"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "APOR"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare du Nord"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T12:51:40.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T12:52:20.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T12:51:40.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T12:52:20.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "123506"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["shortTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:10.495Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_147122:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::4b0ed7de-4e8b-46ea-8a71-c9c761a52a1c:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41326:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pont de Rungis"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "ROMI"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pont de Rungis"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T12:58:10.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T12:58:50.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 2,
+                  "AimedArrivalTime": "2025-01-24T12:58:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T12:58:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "147123"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:10.191Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_123473:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01737:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::812958db-9cc9-4970-be83-3bf447bdf7d6:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41091:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pontoise"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "OPOC"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pontoise"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T13:05:50.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T13:06:30.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 9,
+                  "AimedArrivalTime": "2025-01-24T13:05:50.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T13:06:30.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "123473"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["shortTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:10.354Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_147524:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::47f2ef3f-d09f-4afd-bf6a-c92c2ec6e9a6:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:412833:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Massy-Palaiseau"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "MONA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Massy-Palaiseau"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T13:13:50.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T13:14:30.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T13:13:50.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T13:14:30.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "147524"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:03.833Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_148513:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::6aa27340-5de6-49d1-b63e-878e12b1ce3a:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41091:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Pontoise"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "NORA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Pontoise"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T13:15:10.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T13:15:50.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 33,
+                  "AimedArrivalTime": "2025-01-24T13:15:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T13:15:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "148512"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:04.726Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_123508:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01737:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::0ffec5a8-f7c9-4da5-a811-bcbe988d6295:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41071:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare du Nord"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "APOR"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare du Nord"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T13:21:40.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T13:22:20.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T13:21:40.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T13:22:20.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "123508"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:06.365Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_148115:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::dc688600-5d65-43ab-8db9-7a4e3276adb9:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:41088:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Gare de Montigny Beauchamp"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "GOTA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Gare de Montigny Beauchamp"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T13:30:10.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T13:30:50.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 29,
+                  "AimedArrivalTime": "2025-01-24T13:30:10.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "1"
+                  },
+                  "AimedDepartureTime": "2025-01-24T13:30:50.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "148115"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            },
+            {
+              "RecordedAtTime": "2025-01-24T02:10:03.367Z",
+              "ItemIdentifier": "SNCF_ACCES_CLOUD:Item::41087_147528:LOC",
+              "MonitoringRef": {
+                "value": "STIF:StopPoint:Q:41087:"
+              },
+              "MonitoredVehicleJourney": {
+                "LineRef": {
+                  "value": "STIF:Line::C01727:"
+                },
+                "OperatorRef": {
+                  "value": "SNCF_ACCES_CLOUD:Operator::SNCF:"
+                },
+                "FramedVehicleJourneyRef": {
+                  "DataFrameRef": {
+                    "value": "any"
+                  },
+                  "DatedVehicleJourneyRef": "SNCF_ACCES_CLOUD:VehicleJourney::7389334d-1fba-452a-94de-a5fa7012d6b4:LOC"
+                },
+                "DirectionName": [],
+                "DestinationRef": {
+                  "value": "STIF:StopPoint:Q:412833:"
+                },
+                "DestinationName": [
+                  {
+                    "value": "Massy-Palaiseau"
+                  }
+                ],
+                "VehicleJourneyName": [],
+                "JourneyNote": [
+                  {
+                    "value": "MONA"
+                  }
+                ],
+                "MonitoredCall": {
+                  "StopPointName": [
+                    {
+                      "value": "Gare de Franconville le Plessis Bouchard"
+                    }
+                  ],
+                  "VehicleAtStop": false,
+                  "DestinationDisplay": [
+                    {
+                      "value": "Massy-Palaiseau"
+                    }
+                  ],
+                  "ExpectedArrivalTime": "2025-01-24T13:43:50.000Z",
+                  "ExpectedDepartureTime": "2025-01-24T13:44:30.000Z",
+                  "DepartureStatus": "onTime",
+                  "Order": 6,
+                  "AimedArrivalTime": "2025-01-24T13:43:50.000Z",
+                  "ArrivalPlatformName": {
+                    "value": "2"
+                  },
+                  "AimedDepartureTime": "2025-01-24T13:44:30.000Z",
+                  "ArrivalStatus": "onTime"
+                },
+                "TrainNumbers": {
+                  "TrainNumberRef": [
+                    {
+                      "value": "147529"
+                    }
+                  ]
+                },
+                "VehicleFeatureRef": ["longTrain"]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

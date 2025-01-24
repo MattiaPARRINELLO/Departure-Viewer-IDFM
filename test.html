@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prochains Trains</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #cdcacf;
+      }
+
+      .train-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 100vw;
+      }
+
+      .time {
+        background-color: #7b8e94;
+        color: white;
+        padding: 5px 10px;
+        margin: 10px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 30px;
+      }
+
+      .details {
+        flex-grow: 1;
+        margin: 0 100px;
+        font-size: 16px;
+        color: #728387;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .track {
+        background-color: #0e1436;
+        color: white;
+        padding: 5px 10px;
+        margin: 10px;
+        border-radius: 18px;
+        font-weight: bold;
+        font-size: 30px;
+      }
+      .city {
+        font-size: 20px;
+        color: #728387;
+        padding: 0px 100px;
+      }
+      .train-item {
+        display: flex;
+        align-items: center;
+        background-color: #0e1436;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        margin: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 100%;
+      }
+
+      .train-item .logo {
+        display: flex;
+        align-items: center;
+        color: #728387;
+      }
+
+      .train-item .logo img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 4px;
+      }
+
+      .train-item .destination {
+        font-weight: bold;
+      }
+
+      .destination {
+        margin-left: 100px;
+        margin-right: auto;
+        font-size: 30px;
+      }
+
+      .train-item .time-info {
+        font-size: 25px;
+      }
+      .time-info {
+        margin-left: auto;
+      }
+
+      .platform {
+        background-color: white;
+        color: #0e1436;
+        padding: 5px 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        border-radius: 18px;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #0e1436;
+      }
+
+      .trainContainer {
+        display: flex;
+        width: 100vw;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="train-info">
+      <div class="time">11:03</div>
+      <div class="details">Prochains Trains</div>
+      <div class="city">Franconville-Le Plessis Bouchard</div>
+      <div class="track">Voie</div>
+    </div>
+    <div class="trainContainer">
+      <div class="train-item">
+        <div class="logo">
+          <img src="Paris_transit_icons_-_RER_C.svg" alt="RER C" />
+          <span>NORA</span>
+        </div>
+        <div class="destination">Massy Palaiseau</div>
+        <div class="time-info">3 min</div>
+      </div>
+      <div class="platform">1</div>
+    </div>
+  </body>
+</html>

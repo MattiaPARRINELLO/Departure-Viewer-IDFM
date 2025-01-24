@@ -1,0 +1,15 @@
+[
+    {
+        "ligne": "STIF:Line::C01727" (LineRef),
+        "direction": "Gare de Brétigny" (DirectionName),
+        "misson": "BOBA" (JourneyNote),
+        "atStop": "true" (VehicleAtStop),
+        "arrivalAtStationEXP": "2025-01-24T16:40:01.000Z", (ExpectedArrivalTime),
+        "departureAtStationEXP": "2025-01-24T16:40:41.000Z", (ExprectedDepartureTime),
+        "arrivalAtStationOBJ": "2025-01-24T16:40:01.000Z" (AimedArrivalTime),
+        "status": "onTime", (ArrivalStatus),
+        "platform": "1" (ArrivalPlatformName),
+        "trainLenght": "longTrain" (VehicleFeatureRef)
+
+    }
+]

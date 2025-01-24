@@ -1,0 +1,38 @@
+[
+  {
+    "arrid": "474424",
+    "arrversion": "1595214-1497342",
+    "arrcreated": "2019-06-05T00:00:00+02:00",
+    "arrchanged": "2024-07-25T09:04:29+02:00",
+    "arrname": "Orly 4",
+    "arrtype": "rail",
+    "arrxepsg2154": 653434,
+    "arryepsg2154": 6847779,
+    "arrtown": "Paray-Vieille-Poste",
+    "arrpostalregion": "91479",
+    "arraccessibility": "true",
+    "arraudiblesignals": "false",
+    "arrvisualsigns": "false",
+    "arrfarezone": "4",
+    "zdaid": "473873",
+    "arrgeopoint": { "lon": 2.3669088903841873, "lat": 48.72845779956202 }
+  },
+  {
+    "arrid": "487012",
+    "arrversion": "1568699-1568701",
+    "arrcreated": "2023-04-20T10:04:41+02:00",
+    "arrchanged": "2024-04-24T11:33:51+02:00",
+    "arrname": "Nanterre-La-Folie",
+    "arrtype": "rail",
+    "arrxepsg2154": 643294,
+    "arryepsg2154": 6866662,
+    "arrtown": "Nanterre",
+    "arrpostalregion": "92050",
+    "arraccessibility": "unknown",
+    "arraudiblesignals": "unknown",
+    "arrvisualsigns": "unknown",
+    "arrfarezone": "3",
+    "zdaid": "487011",
+    "arrgeopoint": { "lon": 2.226543253415903, "lat": 48.897464246822 }
+  }
+]
