@@ -13,7 +13,7 @@ body {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100vw;
+  width: 99vw;
 }
 
 .time {
@@ -55,7 +55,6 @@ body {
 
 .city input {
   font-size: 20px;
-  width: 40ch;
   color: #728387;
   border: 1px solid #728387;
 }
@@ -83,13 +82,15 @@ body {
   margin-right: 10px;
   border-radius: 4px;
 }
+.train-item .logo span {
+  width: 11.9vw;
+}
 
 .train-item .destination {
   font-weight: bold;
 }
 
 .destination {
-  margin-left: 100px;
   margin-right: auto;
   font-size: 30px;
 }
@@ -98,7 +99,13 @@ body {
   font-size: 25px;
 }
 .time-info {
-  margin-left: auto;
+  width: 10vw;
+  text-align: right;
+}
+
+.time-station {
+  font-size: 20px;
+  color: #728387;
 }
 
 .platform {
@@ -121,6 +128,95 @@ body {
 
 .trainContainer {
   display: flex;
-  width: 100vw;
+  width: 99vw;
+  max-width: 99vw;
   justify-content: space-between;
+}
+
+.loaderDiv {
+  display: flex;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  animation: prixClipFix 8s linear infinite;
+}
+.loader::after {
+  border-color: #ff3d00;
+  animation: prixClipFix 8s linear infinite, rotate 0.5s linear infinite reverse;
+  inset: 6px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+.suggestionContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: orange;
+  z-index: 1000;
+  width: 257.6px;
+}
+
+.suggestion {
+  border: 1px solid #728387;
+  background-color: white;
+  color: #728387;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.suggestion:hover {
+  background-color: #728387;
+  color: white;
+  transition: 0.5s;
 }
