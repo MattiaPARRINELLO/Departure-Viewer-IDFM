@@ -347,10 +347,12 @@ async function createSearchSuggestions() {
         let stations = await getStations(value, 15);
         let uniqueStations = [];
         const seenZdaids = new Set();
-        for (const station of stations) {
-            if (!seenZdaids.has(station.zdaid)) {
-                uniqueStations.push(station);
-                seenZdaids.add(station.zdaid);
+        if (stations.length > 1) {
+            for (const station of stations) {
+                if (!seenZdaids.has(station.zdaid)) {
+                    uniqueStations.push(station);
+                    seenZdaids.add(station.zdaid);
+                }
             }
         }
         stations = uniqueStations;
@@ -360,10 +362,13 @@ async function createSearchSuggestions() {
             div.classList.add("suggestion");
             div.textContent = station.arrname;
             div.addEventListener("click", function () {
+                console.log(station.arrname);
                 input.value = station.arrname;
                 suggestionsDiv.innerHTML = "";
                 main();
             });
+            console.log(div)
+
             suggestionsDiv.appendChild(div);
         });
     });
@@ -374,5 +379,7 @@ async function createSearchSuggestions() {
 
 
 document.getElementById("city").addEventListener("blur", function () {
-    document.getElementById("suggestionContainer").innerHTML = "";
+    setTimeout(() => {
+        document.getElementById("suggestionContainer").innerHTML = "";
+    }, 1000);
 });
