@@ -371,3 +371,8 @@ async function createSearchSuggestions() {
 }
 
 
+
+
+document.getElementById("city").addEventListener("blur", function () {
+    document.getElementById("suggestionContainer").innerHTML = "";
+});
