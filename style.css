@@ -88,6 +88,7 @@ body {
 
 .train-item .destination {
   font-weight: bold;
+  width: 340px;
 }
 
 .destination {
@@ -99,6 +100,7 @@ body {
   font-size: 25px;
 }
 .time-info {
+  margin-left: auto;
   width: 10vw;
   text-align: right;
 }
@@ -219,4 +221,140 @@ body {
   background-color: #728387;
   color: white;
   transition: 0.5s;
+}
+
+/* Styles pour les écrans de taille normale (par défaut) */
+/* Aucun changement nécessaire, le site conserve son apparence actuelle */
+
+/* Écrans plus petits (tablettes et petits ordinateurs portables, max 1024px) */
+@media (max-width: 1024px) {
+  .train-info {
+    width: 95%;
+    margin: auto;
+  }
+
+  .details {
+    font-size: 30px;
+    margin: 0 20px;
+    text-align: center;
+  }
+
+  .city {
+    padding: 0 20px;
+  }
+}
+
+/* Écrans moyens (tablettes, max 768px) */
+@media (max-width: 768px) {
+  .train-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5px auto;
+    padding: 10px;
+  }
+
+  .time,
+  .track {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  .track {
+    display: none;
+  }
+
+  .details {
+    font-size: 24px;
+  }
+
+  .city {
+    padding: 0;
+    font-size: 20px;
+  }
+
+  .city input {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .trainContainer {
+    padding: 0;
+    margin: 0;
+  }
+
+  .train-item {
+    padding: 10px;
+    margin: 5px;
+    margin-left: 5px;
+  }
+
+  .train-item .time-info {
+    font-size: 15px;
+    margin-right: 15px;
+  }
+
+  .time-station {
+    font-size: 13px;
+  }
+
+  .destination {
+    font-size: 20px;
+    margin-right: 10px;
+    width: 130px;
+  }
+
+  .platform {
+    font-size: 20px;
+    margin: 10px auto;
+  }
+
+  .train-item .logo span {
+    font-size: 14px;
+    margin-right: 5px;
+  }
+}
+
+/* Écrans très petits (téléphones, max 480px) */
+@media (max-width: 480px) {
+  .time {
+    font-size: 20px;
+  }
+
+  .details {
+    font-size: 18px;
+  }
+
+  .city {
+    font-size: 18px;
+  }
+
+  .city input {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .trainContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .train-item {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  .destination {
+    font-size: 16px;
+  }
+
+  .time-info {
+    font-size: 14px;
+  }
+
+  .platform {
+    font-size: 16px;
+    width: 93vw;
+    margin: 0 10px;
+    margin-bottom: 15px;
+  }
 }

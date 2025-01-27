@@ -92,7 +92,7 @@ async function getFutureTrainDepartures(stationID) { //stationID format : STIF:S
         }
         stationID = `STIF:StopPoint:Q:${stationID}:`;
     }
-    console.log(stationID)
+    console.log("New station requested : ", stationID);
     const url = `${APIUrl}/stop-monitoring?MonitoringRef=${stationID}`
     let apiKey = await getApiKey();
     let response = await fetch(url, {
@@ -112,7 +112,6 @@ async function getFutureTrainDepartures(stationID) { //stationID format : STIF:S
 async function formatNextDepartures(data) { //data is the object returned by getFutureTrainDepartures
     let returnData = [];
     const mainData = data.Siri.ServiceDelivery.StopMonitoringDelivery[0].MonitoredStopVisit;
-    console.log(mainData)
     for (const info of mainData) {
         console.groupCollapsed("####---New Departure---####")
         let isLive = true
@@ -121,7 +120,7 @@ async function formatNextDepartures(data) { //data is the object returned by get
         let arrivalTemp = 0;
         // Set default value for ArrivalPlatformName if undefined
         if (!info.MonitoredVehicleJourney.MonitoredCall.ArrivalPlatformName) {
-            info.MonitoredVehicleJourney.MonitoredCall.ArrivalPlatformName = { value: "ND" };
+            info.MonitoredVehicleJourney.MonitoredCall.ArrivalPlatformName = { value: "#" };
         }
 
         // Determine the arrival time
@@ -157,16 +156,14 @@ async function formatNextDepartures(data) { //data is the object returned by get
         let diffMinutes = Math.floor(diff / 60000);
         let diffSeconds = Math.floor((diff % 60000) / 1000);
         diff = `${diffMinutes}m ${diffSeconds}s`;
-        if (diffMinutes == 1) {
-            diff = "A l'approche"
-        } else if (diffMinutes == 0) {
-            diff = "Départ imminent"
-        }
 
         let departure = new Date(info.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime)
         let timeAtStation = departure - arrival
         timeAtStation = Math.floor(timeAtStation / 1000) + "s";
         if (timeAtStation == "0s") {
+            timeAtStation = null
+        }
+        if (timeAtStation == "NaNs") {
             timeAtStation = null
         }
         let misson = ""
@@ -297,6 +294,9 @@ document.getElementById("city").addEventListener("keypress", createSearchSuggest
 
 function loop() {
     document.querySelectorAll('body > div.trainContainer').forEach(div => {
+        if (div.querySelector('.data') == null) {
+            return;
+        }
         const data = JSON.parse(div.querySelector('.data').textContent);
         const timeInfo = div.querySelector('.time-info');
         const arrivalTime = new Date(data.arrivalTemp);
@@ -308,15 +308,8 @@ function loop() {
         } else {
             const diffMinutes = Math.floor(diff / 60000);
             const diffSeconds = Math.floor((diff % 60000) / 1000);
-            if (diffMinutes == 1) {
-                timeInfo.textContent = "A l'approche";
-            }
-            else if (diffMinutes == 0) {
-                timeInfo.textContent = `Départ imminent`;
-            }
-            else {
-                timeInfo.textContent = `${diffMinutes}m ${diffSeconds}s`;
-            }
+            timeInfo.textContent = `${diffMinutes}m ${diffSeconds}s`;
+
         }
     });
 }
@@ -340,7 +333,6 @@ function loading(isLoading) {
 async function createSearchSuggestions() {
     const input = document.getElementById("city");
     const suggestionsDiv = document.getElementById("suggestionContainer");
-    console.log(suggestionsDiv)
     input.addEventListener("input", async function () {
         const value = input.value;
 
@@ -367,7 +359,6 @@ async function createSearchSuggestions() {
                 suggestionsDiv.innerHTML = "";
                 main();
             });
-            console.log(div)
 
             suggestionsDiv.appendChild(div);
         });
