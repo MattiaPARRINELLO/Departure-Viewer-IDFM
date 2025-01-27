@@ -15,6 +15,6 @@ def decode_json_unicode(input_file, output_file):
         print(f"Erreur : {e}")
 
 # Exemple d'utilisation
-input_file = "DataSet/arrets.json"  # Remplace par le chemin de ton fichier JSON
-output_file = "DataSet/arretsEncode.json"  # Chemin du fichier de sortie
+input_file = "yourfile.json"  # Remplace par le chemin de ton fichier JSON
+output_file = "DataSet/arrets.json"  # Chemin du fichier de sortie
 decode_json_unicode(input_file, output_file)
