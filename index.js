@@ -382,9 +382,9 @@ async function getUserGPSCoordinates() {
 //Is called when the browser supports geolocation
 //Call showPopUp
 async function getNearestStationFromGPS(position) {
+    showLoader(true)
     let latitude = position[1]
     let longitude = position[0]
-
     let data = await fetch("DataSet/arrets.json")
     data = await data.json()
     for (let station of data) {
@@ -395,6 +395,7 @@ async function getNearestStationFromGPS(position) {
     }
     data.sort((a, b) => a.distance - b.distance)
     console.log("Nearest station : ", data[0].arrname)
+    showLoader(false)
     showPopUp(data[0])
     return data[0]
 }
