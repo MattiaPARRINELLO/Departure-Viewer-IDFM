@@ -36,6 +36,7 @@ async function getStations(cityName, limit = 0) {
     }
 }
 
+
 // get line data from lineID, return an object
 async function getLineData(lineID) { //lineID format : C02711 of STIF:Line::C02711:
     const simpleLineIDPattern = /^C\d{5}$/;
@@ -80,6 +81,7 @@ async function getLineData(lineID) { //lineID format : C02711 of STIF:Line::C027
     }
 }
 
+
 //Call the api to get the next departures from a station
 //return an unformatted object
 async function getFutureTrainDepartures(stationID) { //stationID format : STIF:StopPoint:Q:41087: or 41087
@@ -104,7 +106,6 @@ async function getFutureTrainDepartures(stationID) { //stationID format : STIF:S
     response = await response.json()
     return response
 }
-
 
 
 //format the next departures data
@@ -210,7 +211,9 @@ async function formatNextDepartures(data) { //data is the object returned by get
 }
 
 
-
+// Function to update the hour element on the page
+// Is called every second
+// No return
 function updateHour() {
     const date = new Date();
     const hours = date.getHours() < 10 ? `0${date.getHours()}` : date.getHours();
@@ -222,10 +225,11 @@ function updateHour() {
 }
 
 
-
-setInterval(updateHour, 1000);
-
-async function main(showLoader = true) {
+//Main function to request a new station
+//Is called when the page is loaded, when the user press enter in the input or when the user click on a suggestion
+//Also called every minute without showing the loader
+//No return
+async function main(showLoader = true) { //showLoader is a boolean to show or not the loader
     if (showLoader) {
         loading(true)
     }
@@ -271,27 +275,16 @@ async function main(showLoader = true) {
         <div class="platform">${element.platform}</div>
         <div style="display: none" class="data">${JSON.stringify(element)}</div>`
 
-
         document.body.appendChild(div);
     });
     if (showLoader) {
         loading(false)
     }
-
-
 }
 
 
-main()
-
-document.getElementById("city").addEventListener("keypress", function (e) {
-    if (e.key === 'Enter') {
-        main()
-    }
-})
-document.getElementById("city").addEventListener("keypress", createSearchSuggestions())
-
-
+//Function to loop through the trainContainer divs and update the time every second
+//No return
 function loop() {
     document.querySelectorAll('body > div.trainContainer').forEach(div => {
         if (div.querySelector('.data') == null) {
@@ -314,11 +307,9 @@ function loop() {
     });
 }
 
-setInterval(loop, 1000);
-setInterval(main(false), 60000);
 
-
-
+//Function to show or hide the loader
+//No return
 function loading(isLoading) {
     if (isLoading) {
         loaderDiv.style.display = "flex";
@@ -329,7 +320,9 @@ function loading(isLoading) {
 }
 
 
-
+//Function to create the search suggestions
+//Is called when the user types in the input
+//No return
 async function createSearchSuggestions() {
     const input = document.getElementById("city");
     const suggestionsDiv = document.getElementById("suggestionContainer");
@@ -369,8 +362,14 @@ async function createSearchSuggestions() {
 
 
 
-document.getElementById("city").addEventListener("blur", function () {
-    setTimeout(() => {
-        document.getElementById("suggestionContainer").innerHTML = "";
-    }, 1000);
-});
+
+document.getElementById("city").addEventListener("blur", function () { setTimeout(() => { document.getElementById("suggestionContainer").innerHTML = ""; }, 1000); });
+document.getElementById("city").addEventListener("keypress", createSearchSuggestions())
+document.getElementById("city").addEventListener("keypress", function (e) { if (e.key === 'Enter') { main() } })
+
+setInterval(loop, 1000);
+setInterval(main(false), 60000);
+setInterval(updateHour, 1000);
+
+main()
+
