@@ -1,6 +1,6 @@
-<h1 align="center" id="title">Train Viewer</h1>
+<h1 align="center" id="title">Departure Viewer - IDFM</h1>
 
-<p align="center"><img src="https://socialify.git.ci/MattiaPARRINELLO/IDFMobilit-/image?custom_description=%5BIN+DEV%5D+-+A+project+to+see+upcomming+train+for+a+given+station+using+the+%C3%8Ele-de-France+Mobilit%C3%A9+API&amp;description=1&amp;language=1&amp;name=1&amp;owner=1&amp;theme=Light" alt="project-image"></p>
+<p align="center"><img src="https://socialify.git.ci/MattiaPARRINELLO/Departure-Viewer - IDFM/image?custom_description=%5BIN+DEV%5D+-+A+project+to+see+upcomming+train+for+a+given+station+using+the+%C3%8Ele-de-France+Mobilit%C3%A9+API&amp;description=1&amp;language=1&amp;name=1&amp;owner=1&amp;theme=Light" alt="project-image"></p>
 
 <p id="description">A project to see upcomming train for a given station using the Île-de-France Mobilité API</p>
 
@@ -8,7 +8,7 @@
 
 <h2>🚀 Demo</h2>
 
-[mattia.parrinello.fr](mattia.parrinello.fr)
+[mattiaparrinello.github.io/IDFM-priv/](https://mattiaparrinello.github.io/IDFM-priv/)
 
 <h2>Project Screenshots:</h2>
 
