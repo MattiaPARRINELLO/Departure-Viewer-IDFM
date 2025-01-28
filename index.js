@@ -1,7 +1,7 @@
 const loaderDiv = document.getElementById("loaderDiv");
 async function getApiKey() {
     try {
-        const response = await fetch("/DataSet/apikey.json");
+        const response = await fetch("DataSet/apikey.json");
         let data = await response.json();
         data = data.APIKey;
         return data;
@@ -18,7 +18,7 @@ const APIUrl = "https://prim.iledefrance-mobilites.fr/marketplace"
 //return an array of objects
 async function getStations(cityName, limit = 0) {
     try {
-        const response = await fetch("/DataSet/arrets.json");
+        const response = await fetch("DataSet/arrets.json");
         const stop = await response.json();
         const resultats = stop.filter(station => station.arrname.toLowerCase().includes(cityName.toLowerCase()));
         if (resultats.length <= 0) {
@@ -49,7 +49,7 @@ async function getLineData(lineID) { //lineID format : C02711 of STIF:Line::C027
         lineID = lineID.slice(11, 17);
     }
     try {
-        const response = await fetch("./DataSet/lignes.json");
+        const response = await fetch("DataSet/lignes.json");
         const linesData = await response.json();
         const resultats = linesData.filter(line => line.id_line === lineID);
         if (resultats[0].picto === null) {
