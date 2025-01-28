@@ -360,6 +360,82 @@ async function createSearchSuggestions() {
 }
 
 
+//Function to get the user GPS coordinates
+//Is called when the page is loaded
+//No return
+//If geolocation is supported, call getNearestStationFromGPS
+async function getUserGPSCoordinates() {
+    if (navigator.geolocation) {
+        console.log("Requesting GPS coordinates")
+        await navigator.geolocation.getCurrentPosition(async (position) => {
+            position = [position.coords.longitude, position.coords.latitude]
+            await getNearestStationFromGPS(position)
+        });
+    } else {
+        console.error("Geolocation is not supported by this browser.");
+    }
+}
+
+
+//Function to get the nearest station from GPS coordinates
+//Return the nearest station
+//Is called when the browser supports geolocation
+//Call showPopUp
+async function getNearestStationFromGPS(position) {
+    let latitude = position[1]
+    let longitude = position[0]
+
+    let data = await fetch("DataSet/arrets.json")
+    data = await data.json()
+    for (let station of data) {
+        let stationLatitude = station.arrgeopoint.lat
+        let stationLongitude = station.arrgeopoint.lon
+        let distance = Math.sqrt(Math.pow(stationLatitude - latitude, 2) + Math.pow(stationLongitude - longitude, 2))
+        station.distance = distance
+    }
+    data.sort((a, b) => a.distance - b.distance)
+    console.log("Nearest station : ", data[0].arrname)
+    showPopUp(data[0])
+    return data[0]
+}
+
+
+//Function to show a popup to ask the user if he wants to select the station
+//No return
+//Is called when the user is geolocated
+async function showPopUp(station) {
+    let stationName = station.arrname
+
+    let div = document.createElement("div")
+    div.classList.add("popup")
+    div.innerHTML = `
+    <div class="popup-content">
+        <p>Do you want to select the station: ${stationName}?</p>
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+    </div>
+    `;
+    let overlay = document.createElement("div")
+    overlay.classList.add("overlay")
+    document.body.appendChild(overlay);
+    document.body.appendChild(div);
+
+
+    document.getElementById("yesButton").addEventListener("click", function () {
+        document.getElementById("city").value = stationName;
+        console.log("Selected station : ", stationName)
+        div.remove();
+        overlay.remove();
+        main();
+    });
+
+    document.getElementById("noButton").addEventListener("click", function () {
+        console.log("User declined")
+        div.remove();
+        overlay.remove();
+    });
+}
+
 
 
 
@@ -372,4 +448,6 @@ setInterval(main(false), 60000);
 setInterval(updateHour, 1000);
 
 main()
+getUserGPSCoordinates()
+
 
