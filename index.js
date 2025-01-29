@@ -448,7 +448,7 @@ setInterval(loop, 1000);
 setInterval(main(false), 60000);
 setInterval(updateHour, 1000);
 
-main()
 getUserGPSCoordinates()
+main()
 
 

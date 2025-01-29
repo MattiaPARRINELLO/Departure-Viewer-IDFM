@@ -6,7 +6,7 @@
 
 <p align="center"><img src="https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&amp;logoColor=white" alt="shields"><img src="https://img.shields.io/badge/Made_with-JavaScript-blue?logo=javascript&amp;logoColor=white)" alt="shields"></p>
 
-<h2>🚀 Demo</h2>
+<h2>🚀 Demo</h2
 
 [mattiaparrinello.github.io/IDFM-priv/](https://mattiaparrinello.github.io/IDFM-priv/)
 
