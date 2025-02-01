@@ -13,14 +13,23 @@ async function getApiKey() {
 const APIUrl = "https://prim.iledefrance-mobilites.fr/marketplace"
 
 
-//getstations data from city name, limit is the numer of results
+//Get stations data from city name, limit is the numer of results
 //if no limit is set, all results are returned
+//Is called when the page is loaded, when the user press enter in the input or when the user click on a suggestion
 //return an array of objects
 async function getStations(cityName, limit = 0) {
     try {
         const response = await fetch("DataSet/arrets.json");
         const stop = await response.json();
         const resultats = stop.filter(station => station.arrname.toLowerCase().includes(cityName.toLowerCase()));
+        const exactMatch = resultats.filter(station => station.arrname.toLowerCase() === cityName.toLowerCase());
+        // sort retults by % of match like when the querry is Argenteuil, the first one on result is Argenteuil and then Val d'Argenteuil
+        resultats.sort((a, b) => {
+            const aMatch = a.arrname.toLowerCase().indexOf(cityName.toLowerCase());
+            const bMatch = b.arrname.toLowerCase().indexOf(cityName.toLowerCase());
+            return aMatch - bMatch;
+        });
+
         if (resultats.length <= 0) {
             console.error("No station found");
             loading(false)
@@ -37,7 +46,9 @@ async function getStations(cityName, limit = 0) {
 }
 
 
-// get line data from lineID, return an object
+//Get line data from lineID, return an object
+//Is called when a new station is requested
+//return an object containing the line data
 async function getLineData(lineID) { //lineID format : C02711 of STIF:Line::C02711:
     const simpleLineIDPattern = /^C\d{5}$/;
     const lineIDPattern = /^STIF:Line::C\d{5}:$/;
@@ -83,6 +94,7 @@ async function getLineData(lineID) { //lineID format : C02711 of STIF:Line::C027
 
 
 //Call the api to get the next departures from a station
+//Is called when a new station is requested
 //return an unformatted object
 async function getFutureTrainDepartures(stationID) { //stationID format : STIF:StopPoint:Q:41087: or 41087
     const fullStationIDPattern = /^STIF:StopPoint:Q:\d{5,6}:$/;
@@ -109,6 +121,7 @@ async function getFutureTrainDepartures(stationID) { //stationID format : STIF:S
 
 
 //format the next departures data
+//Is called after getFutureTrainDepartures
 //return an array of objects (departures)
 async function formatNextDepartures(data) { //data is the object returned by getFutureTrainDepartures
     let returnData = [];
@@ -229,12 +242,12 @@ function updateHour() {
 //Is called when the page is loaded, when the user press enter in the input or when the user click on a suggestion
 //Also called every minute without showing the loader
 //No return
-async function main(showLoader = true) { //showLoader is a boolean to show or not the loader
+async function main(showLoader = true, filter = []) { //showLoader is a boolean to show or not the loader
     if (showLoader) {
         loading(true)
     }
     let querry = document.getElementById("city").value
-    if (querry == "") {
+    if (querry == "") { //If the input is empty, return
         if (showLoader) {
             loading(false)
         }
@@ -245,22 +258,42 @@ async function main(showLoader = true) { //showLoader is a boolean to show or no
     stationID = stationID[0].zdaid
     let data = await getFutureTrainDepartures(stationID)
     let departures = await formatNextDepartures(data)
-    document.querySelectorAll('body > div').forEach(div => {
+    document.querySelectorAll('body > div').forEach(div => { //Remove all the trainContainer divs
         if (!div.classList.contains('train-info') && !div.classList.contains('loaderDiv')) {
             div.remove();
         }
     });
+    let listLine = [] //List of all the lines of the current result to show in the dropdown
+    let listDestination = [] //List of all the destinations of the current result to show in the dropdown
     departures.forEach(element => {
-        let color = "#ffffff"
-        if (element.isLive) {
+        let color = "#ffffff" //Default color
+        let displayState = "flex" //Default display 
+        let platformTime = element.timeAtStation //Time at station
+        if (!listLine.includes(element.line.name)) { //If the line is not already in the list, add it
+            listLine.push(element.line.name)
+        }
+        if (!listDestination.includes(element.direction)) { //If the direction is not already in the list, add it
+            listDestination.push(element.direction)
+        }
+        if (filter.length != 0) { //If there is a filter
+            if (!filter[0].includes(element.direction) && filter[0].length != 0) { //If the direction is not in the filter and the filter is not empty,
+                displayState = "none"
+            }
+            if (!filter[1].includes(element.line.name) && filter[1].length != 0) { //If the line is not in the filter and the filter is not empty,
+                displayState = "none"
+            }
+        }
+        if (element.isLive) { //If the data we get from the API is live(following the train), set the color to lightgreen
             color = "lightgreen"
         }
-        let div = document.createElement("div")
-        let platformTime = element.timeAtStation
-        if (platformTime == null) {
-            platformTime = ""
+        if (platformTime == null) { //If the time at station could not be determined, set it to an empty string
+            platformTime = "";
         }
+
+        let div = document.createElement("div")
         div.classList.add("trainContainer")
+        div.style.display = displayState
+
         div.innerHTML = `
         <div class="train-item">
             <div class="logo">
@@ -277,6 +310,39 @@ async function main(showLoader = true) { //showLoader is a boolean to show or no
 
         document.body.appendChild(div);
     });
+    let lineSelectEL = document.getElementById('lineMenu')
+    let destinationSelectEL = document.getElementById('directionMenu')
+    if (listLine.length <= 1) { //If there is only one line, hide the line dropdown
+        console.log("Only one line")
+        lineSelectEL.style.display = "none"
+        document.getElementById('lineButton').style.display = "none"
+    } else {
+        document.getElementById('lineButton').style.display = "block"
+    }
+    if (listDestination.length <= 1) { //If there is only one destination, hide the destination dropdown
+        destinationSelectEL.style.display = "none"
+        document.getElementById('directionButton').style.display = "none"
+    } else {
+        document.getElementById('directionButton').style.display = "block"
+    }
+    listLine.forEach(line => { //Create the line dropdown
+        let li = document.createElement('li')
+        li.innerHTML = `<input type=checkbox value="${line}" id="${line}" class="checkboxLine" />${line}`
+        li.addEventListener('click', function () {
+            document.getElementById(line).checked = !document.getElementById(line).checked
+            filterResults()
+        })
+        lineSelectEL.appendChild(li)
+    })
+    listDestination.forEach(destination => { //Create the destination dropdown
+        let li = document.createElement('li')
+        li.innerHTML = `<input type=checkbox value="${destination}" id="${destination}" class="checkboxDesti"/>${destination}`
+        li.addEventListener('click', function () {
+            document.getElementById(destination).checked = !document.getElementById(destination).checked
+            filterResults()
+        })
+        destinationSelectEL.appendChild(li)
+    })
     if (showLoader) {
         loading(false)
     }
@@ -284,6 +350,7 @@ async function main(showLoader = true) { //showLoader is a boolean to show or no
 
 
 //Function to loop through the trainContainer divs and update the time every second
+//Is called every second
 //No return
 function loop() {
     document.querySelectorAll('body > div.trainContainer').forEach(div => {
@@ -309,6 +376,7 @@ function loop() {
 
 
 //Function to show or hide the loader
+//Is called when the page is loaded, when the user press enter in the input or when the user click on a suggestion
 //No return
 function loading(isLoading) {
     if (isLoading) {
@@ -382,7 +450,7 @@ async function getUserGPSCoordinates() {
 //Is called when the browser supports geolocation
 //Call showPopUp
 async function getNearestStationFromGPS(position) {
-    showLoader(true)
+    loading(true)
     let latitude = position[1]
     let longitude = position[0]
     let data = await fetch("DataSet/arrets.json")
@@ -395,7 +463,7 @@ async function getNearestStationFromGPS(position) {
     }
     data.sort((a, b) => a.distance - b.distance)
     console.log("Nearest station : ", data[0].arrname)
-    showLoader(false)
+    loading(false)
     showPopUp(data[0])
     return data[0]
 }
@@ -438,17 +506,190 @@ async function showPopUp(station) {
 }
 
 
+//Function to filter the results
+//No return
+//Is called when the user select a line or a destination
+function filterResults() {
+    let allDestCheckbox = document.querySelectorAll('.checkboxDesti')
+    let allLineCheckbox = document.querySelectorAll('.checkboxLine')
+
+    let selectedDest = []
+    let selectedLine = []
+
+    allDestCheckbox.forEach(checkbox => {
+        if (checkbox.checked) {
+            selectedDest.push(checkbox.value)
+        }
+    })
+    allLineCheckbox.forEach(checkbox => {
+        if (checkbox.checked) {
+            selectedLine.push(checkbox.value)
+        }
+    })
+
+
+    // live update the results waiting for the refresh
+    document.querySelectorAll('body > div.trainContainer').forEach(div => {
+        if (div.querySelector('.data') == null) {
+            return;
+        }
+        const data = JSON.parse(div.querySelector('.data').textContent);
+        if (!selectedDest.includes(data.direction) && selectedDest.length != 0) {
+            div.style.display = "none"
+            console.log("Destination not in the list")
+        }
+        if (!selectedLine.includes(data.line.name) && selectedLine.length != 0) {
+            div.style.display = "none"
+            console.log("Line not in the list")
+        }
+        if ((selectedDest.includes(data.direction) || selectedDest.length == 0) && (selectedLine.includes(data.line.name) || selectedLine.length == 0)) {
+            div.style.display = "flex"
+        }
+    });
+    // main(false, [selectedDest, selectedLine])
+}
+
+
+//Function to setup the dropdowns
+//No return
+//Is called when the page is loaded
+function setupDropdown(buttonId, menuId) {
+    document
+        .getElementById(buttonId)
+        .addEventListener("click", function () {
+            const menus = document.querySelectorAll(".dropdown-menu");
+            menus.forEach(menu => {
+                if (menu.id !== menuId) {
+                    menu.classList.remove("active");
+                }
+            });
+            document.getElementById(menuId).classList.toggle("active");
+        });
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".dropdown")) {
+            document.getElementById(menuId).classList.remove("active");
+        }
+    });
+}
+
+
+function getLastUpdateSeen() {
+    let data = localStorage.getItem("update")
+    if (data == null) {
+        return 0
+    }
+    return data
+}
+
+function setLastUpdateSeen(update) {
+    localStorage.setItem("update", update)
+}
+
+
+async function showPopUpWithUpdate(lastUpdateSaw) {
+    let updates = await fetch("DataSet/updates.json")
+    updates = await updates.json()
+    let unseenUpdates = updates.filter(update => update.id > lastUpdateSaw)
+    if (unseenUpdates.length == 0) {
+        return
+    }
+    let div = document.createElement("div")
+    let txtToShow = ""
+    unseenUpdates.forEach(update => {
+        let addedTxt = ""
+        console.log(update.added)
+        if (update.added != undefined) {
+            console.log("Added")
+            addedTxt = "<h4>🚀 - Added</h4><ul>"
+            update.added.forEach(addedFeat => {
+                addedTxt = addedTxt + `<li>${addedFeat}</li>`
+
+            })
+            addedTxt = addedTxt + "</ul>"
+            console.log(addedTxt)
+        }
+        console.log(addedTxt)
+        let fixedTxt = ""
+        if (update.fixed != undefined) {
+            fixedTxt = "<h4>🛠️ - Fixed</h4><ul>"
+            update.fixed.forEach(fixedFeat => {
+                fixedTxt = fixedTxt + `<li>${fixedFeat}</li>`
+            })
+            fixedTxt = fixedTxt + "</ul>"
+        }
+
+        let emoji = getRandomEmoji()
+
+        txtToShow = txtToShow + `
+        <h3>${emoji} - ${update.title}</h3> ${addedTxt} ${fixedTxt}
+        `
+
+
+
+    })
+
+
+    div.classList.add("popup")
+    div.innerHTML = `
+            <div class="popup-content" style="max-height: 80vh; overflow-y: auto;">
+                <p>Check out the new updates!</p>
+                ${txtToShow}
+            </div>
+        `
+    let overlay = document.createElement("div")
+    overlay.classList.add("overlay")
+    overlay.addEventListener("click", function () {
+        div.remove();
+        overlay.remove();
+    })
+    document.body.appendChild(overlay);
+    document.body.appendChild(div);
+    setLastUpdateSeen(unseenUpdates[unseenUpdates.length - 1].id)
+
+
+}
+
+
+function getRandomEmoji() {
+    const emojiRanges = [
+        [0x1F600, 0x1F64F], // Emoticônes
+        [0x1F300, 0x1F5FF], // Symboles divers
+        [0x1F680, 0x1F6FF], // Transport & cartes
+        [0x1F700, 0x1F77F], // Alchimie
+        [0x1F780, 0x1F7FF], // Géométrie supplémentaire
+        [0x1F800, 0x1F8FF], // Flèches supplémentaires
+        [0x1F900, 0x1F9FF], // Supplémentaux
+        [0x1FA00, 0x1FA6F], // Objets divers
+    ];
+
+    const range = emojiRanges[Math.floor(Math.random() * emojiRanges.length)];
+    const emojiCode = Math.floor(Math.random() * (range[1] - range[0] + 1)) + range[0];
+    return String.fromCodePoint(emojiCode);
+}
+
+
 
 
 document.getElementById("city").addEventListener("blur", function () { setTimeout(() => { document.getElementById("suggestionContainer").innerHTML = ""; }, 1000); });
 document.getElementById("city").addEventListener("keypress", createSearchSuggestions())
 document.getElementById("city").addEventListener("keypress", function (e) { if (e.key === 'Enter') { main() } })
+// document.getElementById("ligne").addEventListener("change", function () { filter() })
+// document.getElementById("destination").addEventListener("change", function () { filter() })
 
 setInterval(loop, 1000);
 setInterval(main(false), 60000);
 setInterval(updateHour, 1000);
 
-getUserGPSCoordinates()
+setupDropdown("lineButton", "lineMenu");
+setupDropdown("directionButton", "directionMenu");
+showPopUpWithUpdate(getLastUpdateSeen())
+
+// getUserGPSCoordinates()
 main()
+
+
+
+
+
 
 

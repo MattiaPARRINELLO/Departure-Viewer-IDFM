@@ -6,6 +6,50 @@
     <title>Document</title>
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .dropdown {
+        position: relative;
+        width: 250px;
+      }
+      .dropdown-button {
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .dropdown-menu {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        margin-top: 5px;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        max-height: 150px;
+        overflow-y: auto;
+        z-index: 1000;
+      }
+      .dropdown-menu.active {
+        display: block;
+      }
+      .dropdown-menu li {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .dropdown-menu li:hover {
+        background-color: #f0f0f0;
+      }
+      .dropdown-menu input {
+        margin-right: 10px;
+      }
+    </style>
   </head>
   <body>
     <div class="loaderDiv" id="loaderDiv">
@@ -14,6 +58,17 @@
     <div class="train-info">
       <div class="time" id="time">11:03</div>
       <div class="details">Prochains Trains</div>
+      <!-- place two dropdown here -->
+      <div class="dropdown">
+        <button id="lineButton" class="dropdown-button">--Ligne--</button>
+        <ul id="lineMenu" class="dropdown-menu"></ul>
+      </div>
+      <div class="dropdown">
+        <button id="directionButton" class="dropdown-button">
+          --Direction--
+        </button>
+        <ul id="directionMenu" class="dropdown-menu"></ul>
+      </div>
       <div class="city">
         <input
           id="city"

@@ -22,6 +22,49 @@ Here're some of the project's best features:
 - See how much time a train will be staying at the station
 - [INDEV] - Auto detect the nearest station
 
+<h2>📜 Changelog</h2>
+
+##### [1.0.0] - 2025-01-25
+
+###### Added
+
+- Initial release with basic functionality to view upcoming trains for a specified station.
+
+##### [1.0.1] - 2025-01-26
+
+###### Added
+
+- Added a new feature to see how much time a train will be staying at the station.
+
+- Added searching suggestions for the station search bar.
+
+##### [1.0.2] - 2025-01-27
+
+###### Added
+
+- Auto-detect nearest station based on user's location. (Works better on mobile devices).
+
+- Added compatibility for mobile devices.
+
+- README.md file.
+
+###### Fixed
+
+- Fixed path for JSON file in index.js
+
+##### [1.1.0] - 2025-01-31
+
+###### Added
+
+- Added a filter to show only the trains with a specific destination or line.
+- Added a pop up to show the last update of the project automatically.
+
+###### Fixed
+
+- Better readability for the code.
+- More comments in the code.
+- Improved searching engine (previously when searching for \"Argenteuil\" it would search for \"Val d'Argenteuil\" instead of \"Argenteuil\")
+
 <h2>🛠️ Installation Steps:</h2>
 
 <p>1. Dowload the project</p>
@@ -37,7 +80,9 @@ Here're some of the project's best features:
 <p>6. Download the latest table of stations</p>
 
 ```
+
 https://data.iledefrance-mobilites.fr/explore/dataset/arrets/table/
+
 ```
 
 <p>7. Change the path of input_file in recodeJSON to make it point to the downloaded table</p>
@@ -47,7 +92,9 @@ https://data.iledefrance-mobilites.fr/explore/dataset/arrets/table/
 <p>9. Run the python file</p>
 
 ```
+
 python recodeJSON.py
+
 ```
 
 <h2>💻 Built with</h2>
@@ -59,3 +106,7 @@ Technologies used in the project:
 - CSS
 - Siri
 - IDF Mobilité API
+
+```
+
+```
