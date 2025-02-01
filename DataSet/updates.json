@@ -37,5 +37,21 @@
       "More comments in the code",
       "Improved searching engine (previously when searching for \"Argenteuil\" it would search for \"Val d'Argenteuil\" instead of \"Argenteuil\")"
     ]
+  },
+  {
+    "id": 5,
+    "title": "[1.1.1] - 2025-02-01",
+    "added": [
+      "Loader now shows how many departure were fetched",
+      "Train element stays on the screen after the departure time has passed to show the user how many time the train is at station.",
+      "If the train is at station \"🚉 ➡️\" is shown with how much time the arrival time is passed"
+    ],
+    "fixed": [
+      "Changed language of the HTML page",
+      "Moved the CSS on index.html to style.css",
+      "Fixed the geolocalisation that was not working anymore",
+      "Fixed some train where showing NaNm NaNs of for the arrival time, this is now replaced with \"unknown\" ",
+      "Removed the \"IN DEVELOPMENT\" message from the README.md file"
+    ]
   }
 ]

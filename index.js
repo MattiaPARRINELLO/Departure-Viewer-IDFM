@@ -126,8 +126,12 @@ async function getFutureTrainDepartures(stationID) { //stationID format : STIF:S
 async function formatNextDepartures(data) { //data is the object returned by getFutureTrainDepartures
     let returnData = [];
     const mainData = data.Siri.ServiceDelivery.StopMonitoringDelivery[0].MonitoredStopVisit;
+    let departureNum = 0;
+    let departureNumEl = document.getElementById("loaderCounter")
     for (const info of mainData) {
         console.groupCollapsed("####---New Departure---####")
+        departureNum++;
+        departureNumEl.textContent = departureNum
         let isLive = true
         console.log(info.MonitoredVehicleJourney.LineRef.value)
         let lineData = await getLineData(info.MonitoredVehicleJourney.LineRef.value)
@@ -159,7 +163,7 @@ async function formatNextDepartures(data) { //data is the object returned by get
         let arrival = new Date(arrivalTemp)
         let now = new Date()
         let diff = arrival - now
-        if (diff < 0 || diff > 3600000 || diff == NaN) {
+        if (diff < -60000 || diff > 3600000 || isNaN(diff)) {
             console.log("---Skipping train---")
             console.log("Train is too early or too late")
             console.log("##################")
@@ -170,14 +174,18 @@ async function formatNextDepartures(data) { //data is the object returned by get
         let diffMinutes = Math.floor(diff / 60000);
         let diffSeconds = Math.floor((diff % 60000) / 1000);
         diff = `${diffMinutes}m ${diffSeconds}s`;
+        if (diff == "NaNm NaNs") {
+            diff = "Unknown"
+
+        }
+        if (diffMinutes <= 0 && diffSeconds <= 0) {
+            diff = "At Platform since " + diff
+        }
 
         let departure = new Date(info.MonitoredVehicleJourney.MonitoredCall.ExpectedDepartureTime)
         let timeAtStation = departure - arrival
         timeAtStation = Math.floor(timeAtStation / 1000) + "s";
-        if (timeAtStation == "0s") {
-            timeAtStation = null
-        }
-        if (timeAtStation == "NaNs") {
+        if (timeAtStation == "0s" || timeAtStation == "NaNs") {
             timeAtStation = null
         }
         let misson = ""
@@ -359,16 +367,29 @@ function loop() {
         }
         const data = JSON.parse(div.querySelector('.data').textContent);
         const timeInfo = div.querySelector('.time-info');
+
         const arrivalTime = new Date(data.arrivalTemp);
+        let timeAtPlatform = data.timeAtStation;
+        if (!timeAtPlatform == undefined) {
+            timeAtPlatform = timeAtPlatform.slice(0, -1);
+        }
+        else {
+            timeAtPlatform = 0;
+        }
         const now = new Date();
         const diff = arrivalTime - now;
-
-        if (diff < 0) {
+        console.log(timeAtPlatform)
+        if (diff < -(timeAtPlatform * 1000)) {
             div.remove();
         } else {
             const diffMinutes = Math.floor(diff / 60000);
             const diffSeconds = Math.floor((diff % 60000) / 1000);
+
+            const onlySecondsDiff = Math.floor(diff / 1000);
             timeInfo.textContent = `${diffMinutes}m ${diffSeconds}s`;
+            if (diffMinutes <= 0 && diffSeconds <= 0) {
+                timeInfo.textContent = "🚉 ➡️ " + -onlySecondsDiff + "s ";
+            }
 
         }
     });
@@ -573,6 +594,9 @@ function setupDropdown(buttonId, menuId) {
 }
 
 
+//Function to get from the localstorage the last update seen
+//Return the last update
+//Is called on page loading and passed in parametters of showPopUpWithUpdate
 function getLastUpdateSeen() {
     let data = localStorage.getItem("update")
     if (data == null) {
@@ -581,16 +605,24 @@ function getLastUpdateSeen() {
     return data
 }
 
+
+//Set the last update seen in the localstorage
+//No return
+//Is called after showPopUpWithUpate
 function setLastUpdateSeen(update) {
     localStorage.setItem("update", update)
 }
 
 
-async function showPopUpWithUpdate(lastUpdateSaw) {
+//Show a popup with the latest changes on the project
+//No return
+//Is called on pageloading
+async function showPopUpWithUpdate(lastUpdateSaw) { //lastUpdateSaw is the id off the last seen update
     let updates = await fetch("DataSet/updates.json")
     updates = await updates.json()
     let unseenUpdates = updates.filter(update => update.id > lastUpdateSaw)
     if (unseenUpdates.length == 0) {
+        getUserGPSCoordinates()
         return
     }
     let div = document.createElement("div")
@@ -599,16 +631,13 @@ async function showPopUpWithUpdate(lastUpdateSaw) {
         let addedTxt = ""
         console.log(update.added)
         if (update.added != undefined) {
-            console.log("Added")
             addedTxt = "<h4>🚀 - Added</h4><ul>"
             update.added.forEach(addedFeat => {
                 addedTxt = addedTxt + `<li>${addedFeat}</li>`
 
             })
             addedTxt = addedTxt + "</ul>"
-            console.log(addedTxt)
         }
-        console.log(addedTxt)
         let fixedTxt = ""
         if (update.fixed != undefined) {
             fixedTxt = "<h4>🛠️ - Fixed</h4><ul>"
@@ -620,27 +649,21 @@ async function showPopUpWithUpdate(lastUpdateSaw) {
 
         let emoji = getRandomEmoji()
 
-        txtToShow = txtToShow + `
-        <h3>${emoji} - ${update.title}</h3> ${addedTxt} ${fixedTxt}
-        `
-
-
-
+        txtToShow = txtToShow + `<h3>${emoji} - ${update.title}</h3> ${addedTxt} ${fixedTxt}`
     })
-
 
     div.classList.add("popup")
     div.innerHTML = `
             <div class="popup-content" style="max-height: 80vh; overflow-y: auto;">
                 <p>Check out the new updates!</p>
                 ${txtToShow}
-            </div>
-        `
+            </div>`
     let overlay = document.createElement("div")
     overlay.classList.add("overlay")
     overlay.addEventListener("click", function () {
         div.remove();
         overlay.remove();
+        getUserGPSCoordinates()
     })
     document.body.appendChild(overlay);
     document.body.appendChild(div);
@@ -650,6 +673,9 @@ async function showPopUpWithUpdate(lastUpdateSaw) {
 }
 
 
+//Get a random emoji
+//Return an emoji
+//Is called inside showPopUpWithUpdate
 function getRandomEmoji() {
     const emojiRanges = [
         [0x1F600, 0x1F64F], // Emoticônes
@@ -673,8 +699,6 @@ function getRandomEmoji() {
 document.getElementById("city").addEventListener("blur", function () { setTimeout(() => { document.getElementById("suggestionContainer").innerHTML = ""; }, 1000); });
 document.getElementById("city").addEventListener("keypress", createSearchSuggestions())
 document.getElementById("city").addEventListener("keypress", function (e) { if (e.key === 'Enter') { main() } })
-// document.getElementById("ligne").addEventListener("change", function () { filter() })
-// document.getElementById("destination").addEventListener("change", function () { filter() })
 
 setInterval(loop, 1000);
 setInterval(main(false), 60000);
@@ -684,7 +708,6 @@ setupDropdown("lineButton", "lineMenu");
 setupDropdown("directionButton", "directionMenu");
 showPopUpWithUpdate(getLastUpdateSeen())
 
-// getUserGPSCoordinates()
 main()
 
 

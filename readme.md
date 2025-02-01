@@ -20,7 +20,7 @@ Here're some of the project's best features:
 
 - See upcomming trains for a specified station
 - See how much time a train will be staying at the station
-- [INDEV] - Auto detect the nearest station
+- Auto detect the nearest station
 
 <h2>📜 Changelog</h2>
 
@@ -64,6 +64,22 @@ Here're some of the project's best features:
 - Better readability for the code.
 - More comments in the code.
 - Improved searching engine (previously when searching for \"Argenteuil\" it would search for \"Val d'Argenteuil\" instead of \"Argenteuil\")
+
+#### [1.1.1] - 2025-02-01
+
+##### Added
+
+- Loader now shows how many departure were fetched
+- Train element stays on the screen after the departure time has passed to show the user how many time the train is at station.
+- If the train is at station \"🚉 ➡️\" is shown with how much time the arrival time is passed
+
+##### Fixed
+
+- Changed language of the HTML page
+- Moved the CSS on index.html to style.css
+- Fixed the geolocalisation that was not working anymore
+- Fixed some train where showing NaNm NaNs of for the arrival time, this is now replaced with \"unknown\"
+- Removed the \"IN DEV\" for the geolocalisation feature
 
 <h2>🛠️ Installation Steps:</h2>
 
