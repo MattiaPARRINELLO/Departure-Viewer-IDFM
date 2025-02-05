@@ -53,5 +53,13 @@
       "Fixed some train where showing NaNm NaNs of for the arrival time, this is now replaced with \"unknown\" ",
       "Removed the \"IN DEVELOPMENT\" message from the README.md file"
     ]
+  },
+  {
+    "id": 6,
+    "title": "[1.1.2] - 2025-02-02",
+    "fixed": [
+      "Fixed the platform time thing that made the block disapear after like 3 seconds",
+      "Calling the API more frequently to get the most up to date data"
+    ]
   }
 ]

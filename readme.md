@@ -81,6 +81,13 @@ Here're some of the project's best features:
 - Fixed some train where showing NaNm NaNs of for the arrival time, this is now replaced with \"unknown\"
 - Removed the \"IN DEV\" for the geolocalisation feature
 
+#### [1.1.2] - 2025-02-05
+
+##### Fixed
+
+- Calling the API more frequently to get the most up to date data
+- Fixed the platform time thing that made the block disapear after like 3 seconds
+
 <h2>🛠️ Installation Steps:</h2>
 
 <p>1. Dowload the project</p>

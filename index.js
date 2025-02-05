@@ -163,7 +163,7 @@ async function formatNextDepartures(data) { //data is the object returned by get
         let arrival = new Date(arrivalTemp)
         let now = new Date()
         let diff = arrival - now
-        if (diff < -60000 || diff > 3600000 || isNaN(diff)) {
+        if (diff < -120000 || diff > 3600000 || isNaN(diff)) {
             console.log("---Skipping train---")
             console.log("Train is too early or too late")
             console.log("##################")
@@ -189,7 +189,6 @@ async function formatNextDepartures(data) { //data is the object returned by get
             timeAtStation = null
         }
         let misson = ""
-        console.log(info.MonitoredVehicleJourney.JourneyNote.length)
         if (info.MonitoredVehicleJourney.JourneyNote.length == 0) {
             console.log("No mission")
             misson = ""
@@ -368,18 +367,20 @@ function loop() {
         const data = JSON.parse(div.querySelector('.data').textContent);
         const timeInfo = div.querySelector('.time-info');
 
-        const arrivalTime = new Date(data.arrivalTemp);
+        const arrivalTime = new Date(data.arrivalTemp); //2025-02-05T14:10:44.000Z
+        let whenToRemove = new Date(arrivalTime).getTime();
         let timeAtPlatform = data.timeAtStation;
-        if (!timeAtPlatform == undefined) {
+        if (timeAtPlatform != undefined) {
             timeAtPlatform = timeAtPlatform.slice(0, -1);
         }
         else {
             timeAtPlatform = 0;
         }
+
         const now = new Date();
-        const diff = arrivalTime - now;
-        console.log(timeAtPlatform)
-        if (diff < -(timeAtPlatform * 1000)) {
+        const diff = (arrivalTime - now);
+        whenToRemove = new Date(whenToRemove + timeAtPlatform * 1000 + 5000);
+        if (now > whenToRemove) {
             div.remove();
         } else {
             const diffMinutes = Math.floor(diff / 60000);
@@ -390,7 +391,6 @@ function loop() {
             if (diffMinutes <= 0 && diffSeconds <= 0) {
                 timeInfo.textContent = "🚉 ➡️ " + -onlySecondsDiff + "s ";
             }
-
         }
     });
 }
@@ -436,7 +436,6 @@ async function createSearchSuggestions() {
             div.classList.add("suggestion");
             div.textContent = station.arrname;
             div.addEventListener("click", function () {
-                console.log(station.arrname);
                 input.value = station.arrname;
                 suggestionsDiv.innerHTML = "";
                 main();
@@ -629,7 +628,6 @@ async function showPopUpWithUpdate(lastUpdateSaw) { //lastUpdateSaw is the id of
     let txtToShow = ""
     unseenUpdates.forEach(update => {
         let addedTxt = ""
-        console.log(update.added)
         if (update.added != undefined) {
             addedTxt = "<h4>🚀 - Added</h4><ul>"
             update.added.forEach(addedFeat => {
@@ -700,19 +698,12 @@ document.getElementById("city").addEventListener("blur", function () { setTimeou
 document.getElementById("city").addEventListener("keypress", createSearchSuggestions())
 document.getElementById("city").addEventListener("keypress", function (e) { if (e.key === 'Enter') { main() } })
 
-setInterval(loop, 1000);
-setInterval(main(false), 60000);
-setInterval(updateHour, 1000);
+setInterval(loop, 500);
+setInterval(main(false), 30000);
+setInterval(updateHour, 500);
 
 setupDropdown("lineButton", "lineMenu");
 setupDropdown("directionButton", "directionMenu");
 showPopUpWithUpdate(getLastUpdateSeen())
 
 main()
-
-
-
-
-
-
-
