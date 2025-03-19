@@ -97,14 +97,14 @@ async function getLineData(lineID) { //lineID format : C02711 of STIF:Line::C027
 //Is called when a new station is requested
 //return an unformatted object
 async function getFutureTrainDepartures(stationID) { //stationID format : STIF:StopPoint:Q:41087: or 41087
-    const fullStationIDPattern = /^STIF:StopPoint:Q:\d{5,6}:$/;
+    const fullStationIDPattern = /^STIF:StopArea:SP:\d{5,6}:$/;
     if (!fullStationIDPattern.test(stationID)) {
         const shortStationIDPattern = /^\d{5,6}$/;
         if (!shortStationIDPattern.test(stationID)) {
             console.error("Invalid station ID format : ", stationID);
             return 'error';
         }
-        stationID = `STIF:StopPoint:Q:${stationID}:`;
+        stationID = `STIF:StopArea:SP:${stationID}:`;
     }
     console.log("New station requested : ", stationID);
     const url = `${APIUrl}/stop-monitoring?MonitoringRef=${stationID}`
@@ -191,7 +191,6 @@ async function formatNextDepartures(data) { //data is the object returned by get
         let misson = ""
         if (info.MonitoredVehicleJourney.JourneyNote.length == 0) {
             console.log("No mission")
-            misson = ""
         }
         else {
             misson = info.MonitoredVehicleJourney.JourneyNote[0].value
@@ -199,7 +198,7 @@ async function formatNextDepartures(data) { //data is the object returned by get
         if (info.MonitoredVehicleJourney.JourneyNote == undefined) {
             info.MonitoredVehicleJourney.JourneyNote[0] = { value: "" }
         }
-        tempData = {
+        let tempData = {
             line: lineData,
             direction: info.MonitoredVehicleJourney.DestinationName[0].value,
             mission: misson,
@@ -454,11 +453,16 @@ async function createSearchSuggestions() {
 //If geolocation is supported, call getNearestStationFromGPS
 async function getUserGPSCoordinates() {
     if (navigator.geolocation) {
-        console.log("Requesting GPS coordinates")
-        await navigator.geolocation.getCurrentPosition(async (position) => {
-            position = [position.coords.longitude, position.coords.latitude]
-            await getNearestStationFromGPS(position)
-        });
+        console.log("Requesting GPS coordinates");
+        try {
+            const position = await new Promise((resolve, reject) => {
+                navigator.geolocation.getCurrentPosition(resolve, reject);
+            });
+            const coords = [position.coords.longitude, position.coords.latitude];
+            await getNearestStationFromGPS(coords);
+        } catch (error) {
+            console.error("Error obtaining GPS coordinates:", error);
+        }
     } else {
         console.error("Geolocation is not supported by this browser.");
     }
@@ -599,7 +603,7 @@ function setupDropdown(buttonId, menuId) {
 function getLastUpdateSeen() {
     let data = localStorage.getItem("update")
     if (data == null) {
-        return 0
+        return ""
     }
     return data
 }

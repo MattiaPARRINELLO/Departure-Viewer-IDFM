@@ -88,6 +88,12 @@ Here're some of the project's best features:
 - Calling the API more frequently to get the most up to date data
 - Fixed the platform time thing that made the block disapear after like 3 seconds
 
+#### [1.1.3] - 2025-03-19
+
+##### Fixed
+
+- Fixed the API endpoint that was not working anymore because of a new version of the API on the prim IDF Mobilité side.
+
 <h2>🛠️ Installation Steps:</h2>
 
 <p>1. Dowload the project</p>
