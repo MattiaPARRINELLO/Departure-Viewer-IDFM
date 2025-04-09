@@ -1,0 +1,8 @@
+{
+  "project_name": "Gare à toi",
+  "project_description": "Gare à toi viens d'une problématique simple, je viens d'arriver à la gare, est ce que je dois courir pour avoir un train. En effet ce projet permet simplement de voir les prochains trains qui arrivent et dans exactement combien de temps. De plus quand un train est à quai, l'application permet d'afficher depuis combien de temps ce train est a quai. Fini les courses pour avoir un train qui part dans 10 secondes, grâce à Gare A Toi, tu sais à l'avance que cette course est perdue d'avance.",
+  "github_link": "https://github.com/MattiaPARRINELLO/Departure-Viewer-IDFM",
+  "live_demo": "files/idfm/",
+  "project_image": "files/idfm/logo.png",
+  "project_date": "19/03/2025"
+}
